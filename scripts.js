@@ -9,14 +9,6 @@ $(function() {
     }
 
     function Column(name) {
-    Column.prototype = {
-    addCard: function(card) {
-      this.$element.children('ul').append(card.$element);
-    },
-    removeColumn: function() {
-      this.$element.remove();
-    }
-    };
     var self = this; // przyda się dla funkcji zagnieżdżonych
 
     this.id = randomString();
@@ -47,6 +39,15 @@ $(function() {
         }
     }
     
+Column.prototype = {
+    addCard: function(card) {
+      this.$element.children('ul').append(card.$element);
+    },
+    removeColumn: function() {
+      this.$element.remove();
+    }
+    };
+
     function Card(description) {
 	var self = this;
 
