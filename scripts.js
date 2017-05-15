@@ -67,13 +67,13 @@ Column.prototype = {
         $card.append($cardDelete)
 	    .append($cardDescription);
         return $card;
-        }
+        }}
     Card.prototype = {
 	removeCard: function() {
 		this.$element.remove();
     }
     };
-    }
+    
     var board = {
     name: 'Tablica Kanban',
     addColumn: function(column) {
